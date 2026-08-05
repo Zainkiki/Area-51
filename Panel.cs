@@ -11,6 +11,12 @@ namespace Area_51
         public Panel(Kontrol kontrol)
         {
             Kontrol = kontrol;
+
+        }
+        
+        public void SendARequest()
+        {
+            Kontrol.ReceiveRequest();
         }
     }
 }

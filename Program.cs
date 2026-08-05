@@ -10,6 +10,8 @@ namespace ConsoleApp1
         static void Main()
         {
             Etage etage = new Etage();
+            etage.Panel.SendARequest();
         }
+
     }
 }

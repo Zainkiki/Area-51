@@ -19,5 +19,9 @@ namespace Area_51
         public Panel Panel;
         public Scanner Scanner;
         public Elevator Elevator;
+        public void ReceiveRequest()
+        {
+            Console.WriteLine("Request has been Received");
+        }
     }
 }
