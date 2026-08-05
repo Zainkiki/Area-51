@@ -18,6 +18,7 @@ namespace Area_51
             Scanner = new Scanner(Kontrol);
             Kontrol = new Kontrol(Turret, Panel, Scanner, Elevator);
             Panel = new Panel(Kontrol);
+            Elevator = new Elevator(Kontrol);
         }
 
     }

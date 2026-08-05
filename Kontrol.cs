@@ -23,5 +23,9 @@ namespace Area_51
         {
             Console.WriteLine("Request has been Received");
         }
+        public void ReceiveResponse()
+        {
+            Elevator.AccessGranted();
+        }
     }
 }
