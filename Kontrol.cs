@@ -24,19 +24,29 @@ namespace Area_51
 
         public void KontrolReceivesRequests(string sender)
         {
-            Console.WriteLine("Kontrol: Request has been Received from " + sender);
+            Console.WriteLine("Kontrol: A Request has been Received");
+            if (sender == "Panel")
+            {
+                Console.WriteLine("Kontrol: Panel Requests the elevator");
+            }
+            else if (sender == "Scanner")
+            {
+                Console.WriteLine("Kontrol: Safety information has been Received from Scanner");
+            }
         }
 
         public void KontrolSendsRequests()
         {
-            Elevator.ElevatorReceivesRequests();
             Console.WriteLine("Kontrol: Request has been sent to Elevator");
+            Elevator.ElevatorReceivesRequests();
             Etage_Panel.Etage_PanelReceivesRequests();
             Console.WriteLine("Kontrol: Request has been sent to Etage_Panel");
+            //Turret.TurretReceivesRequests();
         }
-        public void KontrolReceivesResponses()
+        public void KontrolReceivesResponses(string sender)
         {
-            Elevator.AccessGranted();
+            Console.WriteLine("Kontrol: A Response has been Received");
+            Console.WriteLine("Turret: Kill status");
         }
     }
 }

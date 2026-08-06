@@ -23,10 +23,7 @@ namespace Area_51
 
         public void ElevatorReceivesRequests()
         {
-            Console.WriteLine("Elevator: Request will be added to elevator queue");
-        }
-        public void AccessGranted()
-        {
+            Console.WriteLine("Elevator: The Request will be added to the queue");
         }
     }
 }

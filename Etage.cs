@@ -14,12 +14,12 @@ namespace Area_51
         public Etage_Panel Etage_Panel;
         public Etage()
         {
-            Turret = new Turret(Kontrol);
-            Scanner = new Scanner(Kontrol);
             Elevator = new Elevator(Kontrol);
-            Panel = new Panel(Kontrol);
-            Etage_Panel = new Etage_Panel(Elevator, Kontrol);
+            Etage_Panel = new Etage_Panel(Elevator);
             Kontrol = new Kontrol(Turret, Panel, Scanner, Elevator, Etage_Panel);
+            Scanner = new Scanner(Kontrol);
+            Panel = new Panel(Kontrol);
+            Turret = new Turret(Kontrol);
         }
 
     }

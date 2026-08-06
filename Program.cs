@@ -11,8 +11,11 @@ namespace ConsoleApp1
         {
             Etage etage = new Etage();
             etage.Panel.SendARequest();
-            etage.Kontrol.KontrolSendsRequests();
             etage.Scanner.Sendsafetyinformation();
+            etage.Turret.TurretReceivesRequests();
+            etage.Kontrol.KontrolSendsRequests();
+            etage.Etage_Panel.Etage_PanelReceivesRequests();
+            etage.Turret.TurretSendsKillStatus();
         }
 
     }

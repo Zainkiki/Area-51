@@ -7,16 +7,15 @@ namespace Area_51
     internal class Etage_Panel
     {
         public Elevator Elevator;
-        public Kontrol Kontrol;
 
-        public Etage_Panel(Elevator elevator, Kontrol kontrol) 
+        public Etage_Panel(Elevator elevator) 
         {
             Elevator = elevator;
-            Kontrol = kontrol;
         }
 
         public void Etage_PanelReceivesRequests()
         {
+            Console.WriteLine("Etage_Panel: safety information has been Received");
         }
     }
 }
