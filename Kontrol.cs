@@ -6,12 +6,13 @@ namespace Area_51
 {
     internal class Kontrol
     {
-        public Kontrol(Turret turret, Panel panel, Scanner scanner, Elevator elevator)
+        public Kontrol(Turret turret, Panel panel, Scanner scanner, Elevator elevator, Etage_Panel etagePanel)
         {
             Turret = turret;
             Panel = panel;
             Scanner = scanner;
             Elevator = elevator;
+            Etage_Panel = etagePanel;
         }
 
 
@@ -19,12 +20,21 @@ namespace Area_51
         public Panel Panel;
         public Scanner Scanner;
         public Elevator Elevator;
+        public Etage_Panel Etage_Panel;
 
-        public void ReceiveRequests(string sender)
+        public void KontrolReceivesRequests(string sender)
         {
-            Console.WriteLine("Request has been Received");
+            Console.WriteLine("Kontrol: Request has been Received from " + sender);
         }
-        public void ReceiveResponses()
+
+        public void KontrolSendsRequests()
+        {
+            Elevator.ElevatorReceivesRequests();
+            Console.WriteLine("Kontrol: Request has been sent to Elevator");
+            Etage_Panel.Etage_PanelReceivesRequests();
+            Console.WriteLine("Kontrol: Request has been sent to Etage_Panel");
+        }
+        public void KontrolReceivesResponses()
         {
             Elevator.AccessGranted();
         }

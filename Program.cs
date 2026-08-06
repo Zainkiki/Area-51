@@ -11,7 +11,8 @@ namespace ConsoleApp1
         {
             Etage etage = new Etage();
             etage.Panel.SendARequest();
-            etage.Elevator.AccessGranted();
+            etage.Kontrol.KontrolSendsRequests();
+            etage.Scanner.Sendsafetyinformation();
         }
 
     }

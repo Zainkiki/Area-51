@@ -16,7 +16,7 @@ namespace Area_51
 
         public void Sendsafetyinformation()
         {
-            Kontrol.ReceiveRequests("Scanner");
+            Kontrol.KontrolReceivesRequests("Scanner");
         }
     }
 }

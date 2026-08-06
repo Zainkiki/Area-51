@@ -8,10 +8,15 @@ namespace Area_51
     {
         public Elevator Elevator;
         public Kontrol Kontrol;
+
         public Etage_Panel(Elevator elevator, Kontrol kontrol) 
         {
             Elevator = elevator;
             Kontrol = kontrol;
+        }
+
+        public void Etage_PanelReceivesRequests()
+        {
         }
     }
 }

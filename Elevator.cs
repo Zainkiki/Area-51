@@ -20,10 +20,13 @@ namespace Area_51
             Kontrol = kontrol;
             
         }
+
+        public void ElevatorReceivesRequests()
+        {
+            Console.WriteLine("Elevator: Request will be added to elevator queue");
+        }
         public void AccessGranted()
         {
-
-            Console.WriteLine("Access has been Granted Entery allwoed!");
         }
     }
 }
