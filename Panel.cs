@@ -16,7 +16,7 @@ namespace Area_51
         
         public void SendARequest()
         {
-            Kontrol.ReceiveRequest();
+            Kontrol.ReceiveRequests("Panel");
         }
     }
 }

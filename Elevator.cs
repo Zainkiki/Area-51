@@ -22,6 +22,7 @@ namespace Area_51
         }
         public void AccessGranted()
         {
+
             Console.WriteLine("Access has been Granted Entery allwoed!");
         }
     }

@@ -19,11 +19,12 @@ namespace Area_51
         public Panel Panel;
         public Scanner Scanner;
         public Elevator Elevator;
-        public void ReceiveRequest()
+
+        public void ReceiveRequests(string sender)
         {
             Console.WriteLine("Request has been Received");
         }
-        public void ReceiveResponse()
+        public void ReceiveResponses()
         {
             Elevator.AccessGranted();
         }
