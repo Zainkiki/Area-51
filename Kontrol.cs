@@ -15,7 +15,6 @@ namespace Area_51
             Etage_Panel = etagePanel;
         }
 
-
         public Turret Turret;
         public Panel Panel;
         public Scanner Scanner;
@@ -39,9 +38,17 @@ namespace Area_51
         {
             Console.WriteLine("Kontrol: Request has been sent to Elevator");
             Elevator.ElevatorReceivesRequests();
-            Etage_Panel.Etage_PanelReceivesRequests();
             Console.WriteLine("Kontrol: Request has been sent to Etage_Panel");
-            //Turret.TurretReceivesRequests();
+            Etage_Panel.Etage_PanelReceivesRequests();
+            bool killConfirmed = Turret.TurretOrderShoot();
+            if (killConfirmed == true)
+            {
+                Console.WriteLine("Human has been killed");
+            }
+            else
+            {
+                Console.WriteLine("Human hasn't been killed gnag hes a cool guyy trust turst fr fr ");
+            }
         }
         public void KontrolReceivesResponses(string sender)
         {

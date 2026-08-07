@@ -13,14 +13,10 @@ namespace Area_51
             Kontrol = kontrol;
         }
 
-        public void TurretReceivesRequests()
+        public bool TurretOrderShoot()
         {
             Console.WriteLine("Turret: The order has been received");
-        }
-
-        public void TurretSendsKillStatus()
-        {
-            Kontrol.KontrolReceivesResponses("Turret");
+            return true;
         }
     }
 }
